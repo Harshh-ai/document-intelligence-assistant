@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 load_dotenv()
-from numpy import source
 import streamlit as st
 import tempfile
 from langchain_community.document_loaders import PyPDFLoader
