@@ -10,8 +10,10 @@ from langchain_community.vectorstores import FAISS
 from groq import Groq
 GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 client=Groq(api_key=GROQ_API_KEY)
-@st.cache_resource(show_spinner="Indexing documents...")
+@st.cache_resource
 def build_vectorstore_cached(chunks):
+    if not chunks:
+        return None
     embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
@@ -132,8 +134,16 @@ documents=[]
 for pdf in pdf_files:
     docs=load_pdf(pdf)
     documents.extend(docs)
+if len(documents) == 0:
+    st.info("Upload PDF files to start chatting.")
+    st.stop()
 chunks=chunk_docs(documents)
+if len(chunks) == 0:
+    st.warning("No text chunks created from PDFs.")
+    st.stop()
 vectorstore=build_vectorstore_cached(chunks)
+if vectorstore is None:
+    st.stop()
 #st.success(f"split into {len(chunks)} chunks")
 #st.success("Created retriver")
 test_query=st.chat_input("Ask a question about the document: ")
