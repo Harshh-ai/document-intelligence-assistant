@@ -82,5 +82,7 @@ streamlit run app.py
 - Built with production considerations such as caching, error handling, and deployment
 - Designed to be extensible for additional document types or models
 ``` markdown
-## Project Structure
-```text
+
+## Live Demo
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]https://document-intelligence-assistant-wojitdjfpfcjrxv3eyx4xj.streamlit.app/
