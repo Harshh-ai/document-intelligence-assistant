@@ -17,6 +17,7 @@ The Document Intelligence Assistant is an AI-powered application that enables us
 ---
 
 ## How It Works (Architecture)
+
 1. **Document loading**
    - PDF files are uploaded via the UI.
    - Each document is loaded page-by-page using `PyPDFLoader`.
@@ -86,3 +87,11 @@ streamlit run app.py
 ## Live Demo
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]https://document-intelligence-assistant-wojitdjfpfcjrxv3eyx4xj.streamlit.app/
+```
+
+
+## ![App screenshot]
+<img width="1439" height="777" alt="F9A14FBE-F19B-4033-BEB4-6DA5A158A119" src="https://github.com/user-attachments/assets/eaa3dc5c-2f71-46b1-b116-0dd32c6de7b3" />
+<img width="1440" height="900" alt="079D2864-7466-48EA-BA97-D67C05DC4B3C" src="https://github.com/user-attachments/assets/f33ace9d-02ed-4f5d-9237-8a86c9ac462b" 
+/><img width="1440" height="900" alt="006789CA-925D-4379-94B5-5432DDB603CC" src="https://github.com/user-attachments/assets/7a5ba138-aab2-400f-ab4d-6ad4d019a068" />
+
