@@ -62,9 +62,25 @@ The Document Intelligence Assistant is an AI-powered application that enables us
 The application is deployed on Streamlit Cloud and automatically redeploys on each push to the `main` branch. Environment variables (such as API keys) are securely managed using Streamlit Secrets and are not committed to the repository.
 
 ---
+## Run Locally - the app can be run locally by using the following commands:
+MAIN app file : 'app.py'
+```bash
+git clone https://github.com/Harshh-ai/document-intelligence-assistant.git
+cd document-intelligence-assistant
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 
+# create .env in the project root
+GROQ_API_KEY="your_key_here"
+
+streamlit run app.py
+```
 ## Project Highlights
 - Demonstrates a complete RAG pipeline from ingestion to inference
 - Handles multi-document reasoning with source grounding
 - Built with production considerations such as caching, error handling, and deployment
 - Designed to be extensible for additional document types or models
+``` markdown
+## Project Structure
+```text
